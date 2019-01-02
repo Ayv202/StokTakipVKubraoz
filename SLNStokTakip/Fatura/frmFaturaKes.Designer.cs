@@ -35,6 +35,16 @@
             this.btnKaydet = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.Liste = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CikisKodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FKesNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UrunKodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Aciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSil = new System.Windows.Forms.Button();
             this.txtYazi = new System.Windows.Forms.TextBox();
             this.txtToplamT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,16 +70,6 @@
             this.lblGenelNo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CikisKodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FKesNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UrunKodu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Aciklama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -188,6 +188,80 @@
             this.Liste.Size = new System.Drawing.Size(698, 310);
             this.Liste.TabIndex = 0;
             this.Liste.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Liste_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // CikisKodu
+            // 
+            this.CikisKodu.HeaderText = "Çıkış Kodu";
+            this.CikisKodu.Name = "CikisKodu";
+            this.CikisKodu.ReadOnly = true;
+            this.CikisKodu.Visible = false;
+            // 
+            // FKesNo
+            // 
+            this.FKesNo.HeaderText = "F.KesNo";
+            this.FKesNo.Name = "FKesNo";
+            this.FKesNo.Visible = false;
+            // 
+            // UrunKodu
+            // 
+            this.UrunKodu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.UrunKodu.HeaderText = "Ürün Kodu";
+            this.UrunKodu.Name = "UrunKodu";
+            this.UrunKodu.ReadOnly = true;
+            this.UrunKodu.Width = 83;
+            // 
+            // Lot
+            // 
+            this.Lot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Lot.HeaderText = "Lot/Seri No";
+            this.Lot.Name = "Lot";
+            this.Lot.ReadOnly = true;
+            this.Lot.Width = 87;
+            // 
+            // Aciklama
+            // 
+            this.Aciklama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Aciklama.HeaderText = "Açıklama";
+            this.Aciklama.Name = "Aciklama";
+            this.Aciklama.ReadOnly = true;
+            this.Aciklama.Width = 75;
+            // 
+            // Adet
+            // 
+            this.Adet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Adet.HeaderText = "Çıkış Adet";
+            this.Adet.Name = "Adet";
+            this.Adet.ReadOnly = true;
+            this.Adet.Width = 79;
+            // 
+            // BFiyat
+            // 
+            this.BFiyat.HeaderText = "Birim Fiyat";
+            this.BFiyat.Name = "BFiyat";
+            // 
+            // Tutar
+            // 
+            this.Tutar.HeaderText = "Tutar";
+            this.Tutar.Name = "Tutar";
+            // 
+            // btnSil
+            // 
+            this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSil.Location = new System.Drawing.Point(623, 0);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 111);
+            this.btnSil.TabIndex = 6;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // txtYazi
             // 
@@ -447,9 +521,9 @@
             this.lblGenelNo.BackColor = System.Drawing.Color.Red;
             this.lblGenelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGenelNo.ForeColor = System.Drawing.Color.White;
-            this.lblGenelNo.Location = new System.Drawing.Point(588, 10);
+            this.lblGenelNo.Location = new System.Drawing.Point(545, 10);
             this.lblGenelNo.Name = "lblGenelNo";
-            this.lblGenelNo.Size = new System.Drawing.Size(100, 44);
+            this.lblGenelNo.Size = new System.Drawing.Size(143, 44);
             this.lblGenelNo.TabIndex = 4;
             this.lblGenelNo.Text = "**";
             this.lblGenelNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -477,81 +551,6 @@
             this.btnKapat.Text = "FORMU KAPAT";
             this.btnKapat.UseVisualStyleBackColor = true;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 41;
-            // 
-            // CikisKodu
-            // 
-            this.CikisKodu.HeaderText = "Çıkış Kodu";
-            this.CikisKodu.Name = "CikisKodu";
-            this.CikisKodu.ReadOnly = true;
-            this.CikisKodu.Visible = false;
-            // 
-            // FKesNo
-            // 
-            this.FKesNo.HeaderText = "F.KesNo";
-            this.FKesNo.Name = "FKesNo";
-            this.FKesNo.Visible = false;
-            // 
-            // UrunKodu
-            // 
-            this.UrunKodu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.UrunKodu.HeaderText = "Ürün Kodu";
-            this.UrunKodu.Name = "UrunKodu";
-            this.UrunKodu.ReadOnly = true;
-            this.UrunKodu.Width = 83;
-            // 
-            // Lot
-            // 
-            this.Lot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Lot.HeaderText = "Lot/Seri No";
-            this.Lot.Name = "Lot";
-            this.Lot.ReadOnly = true;
-            this.Lot.Width = 87;
-            // 
-            // Aciklama
-            // 
-            this.Aciklama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Aciklama.HeaderText = "Açıklama";
-            this.Aciklama.Name = "Aciklama";
-            this.Aciklama.ReadOnly = true;
-            this.Aciklama.Width = 75;
-            // 
-            // Adet
-            // 
-            this.Adet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Adet.HeaderText = "Çıkış Adet";
-            this.Adet.Name = "Adet";
-            this.Adet.ReadOnly = true;
-            this.Adet.Width = 79;
-            // 
-            // BFiyat
-            // 
-            this.BFiyat.HeaderText = "Birim Fiyat";
-            this.BFiyat.Name = "BFiyat";
-            // 
-            // Tutar
-            // 
-            this.Tutar.HeaderText = "Tutar";
-            this.Tutar.Name = "Tutar";
-            // 
-            // btnSil
-            // 
-            this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSil.Location = new System.Drawing.Point(623, 0);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 111);
-            this.btnSil.TabIndex = 6;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // frmFaturaKes
             // 
