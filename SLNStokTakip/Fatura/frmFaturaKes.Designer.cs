@@ -521,7 +521,7 @@
             this.lblGenelNo.BackColor = System.Drawing.Color.Red;
             this.lblGenelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGenelNo.ForeColor = System.Drawing.Color.White;
-            this.lblGenelNo.Location = new System.Drawing.Point(545, 10);
+            this.lblGenelNo.Location = new System.Drawing.Point(537, 10);
             this.lblGenelNo.Name = "lblGenelNo";
             this.lblGenelNo.Size = new System.Drawing.Size(143, 44);
             this.lblGenelNo.TabIndex = 4;
